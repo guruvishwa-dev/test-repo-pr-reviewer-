@@ -1,61 +1,61 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="h-screen p-10">
-      {/* Logo */}
-      <div>
+    <div className="page-container">
+      <h1>Welcome to Next js!</h1>
+
+      <div className="logo-place" style={{ textAlign: 'center' }}>
         <Image
           src="/next.svg"
-          alt="next logo"
-          width="180"
-          height="38"
+          alt="next image"
+          width="180px"
+          height="38px"
         />
       </div>
 
-      {/* Text Section */}
       <div>
-        <p>To start edit the file:</p>
-        <p>
-          <code>app/page.tsx</code>
-        </p>
-        <p>Save it to see changes</p>
+        <ul>
+          <li>Edit the file <b>app/page.tsx</b></li>
+          <li>See the change after saving.</li>
+        </ul>
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-5 mt-10">
+      <div className="buttonsArea" style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
         <a
-          href="https://vercel.com/new"
+          href="https://vercel.com"
           target="_blank"
-          className="bg-black text-white p-2 rounded"
+          className="vercel-button"
         >
-          <Image src="/vercel.svg" alt="vercel" width="20" height="20" />
-          Deploy Now
+          <Image src="/vercel.svg" width="20px" height="20px" alt="vercel logo" />
+          <span>Deploy now</span>
         </a>
 
         <a
           href="https://nextjs.org/docs"
-          target="_blank"
-          className="border border-gray-300 p-2 rounded"
+          className="docs-link"
         >
-          Read Docs
+          Documentation
         </a>
       </div>
 
-      {/* Footer Links */}
-      <div style={{ marginTop: 100 }}>
+      <footer className="bottom-footer" style={{ marginTop: '80px' }}>
+        <p>Useful Links:</p>
         <a href="https://nextjs.org/learn">
-          <Image src="/file.svg" width={16} height={16} alt="file" /> Learn
+          <Image src="/file.svg" width={16} height={16} alt="file" />
+          Learn Next
         </a>
         <br />
         <a href="https://vercel.com/templates">
-          <Image src="/window.svg" width={16} height={16} alt="win" /> Examples
+          <Image src="/window.svg" width={16} height={16} alt="template" />
+          Templates
         </a>
         <br />
         <a href="https://nextjs.org">
-          <Image src="/globe.svg" width={16} height={16} alt="globe" /> Visit
+          <Image src="/globe.svg" width={16} height={16} alt="globe" />
+          Visit Site
         </a>
-      </div>
+      </footer>
     </div>
-  );
+  )
 }
